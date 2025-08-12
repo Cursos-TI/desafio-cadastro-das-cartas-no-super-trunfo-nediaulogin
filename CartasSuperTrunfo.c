@@ -36,18 +36,21 @@ int main() {
     // Entrada Carta1
 
     printf("=== Cadastro de Carta Super Trunfo ===\n");
+    printf("\n=== Carta1 ===\n");
+    
     printf("Digite o estado: ");
-    fgets(estado1, sizeof(estado1), stdin);
-    estado1[strcspn(estado1, "\n")] = 0; // remove o \n
+    scanf(" %[^\n]", estado1); 
+
+    printf("Digite o código da carta (ex: A01): ");
+    scanf("%3s", codigo1);
 
     printf("Digite o nome da cidade: ");
-    fgets(nomeCidade1, sizeof(nomeCidade1), stdin);
-    nomeCidade1[strcspn(nomeCidade1, "\n")] = 0;
+    scanf(" %[^\n]", nomeCidade1); 
 
-    printf("Digite a populacao: ");
+    printf("Digite a população: ");
     scanf("%d", &populacao1);
 
-    printf("Digite o PIB (em bilhões): "); // como estava no exemplo fiz da mesma forma
+    printf("Digite o PIB (em bilhões): ");
     scanf("%f", &pib1);
 
     printf("Digite a área (em km²): ");
@@ -55,6 +58,32 @@ int main() {
 
     printf("Digite o número de pontos turísticos: ");
     scanf("%d", &pontosTuristicos1);
+
+    
+    printf("\n=== Carta2 ===\n");
+
+    // Entrada Carta2
+    
+    printf("Digite o estado: ");
+    scanf(" %[^\n]", estado2); 
+
+    printf("Digite o código da carta (ex: A01): ");
+    scanf("%3s", codigo2);
+
+    printf("Digite o nome da cidade: ");
+    scanf(" %[^\n]", nomeCidade2); 
+
+    printf("Digite a população: ");
+    scanf("%d", &populacao2);
+
+    printf("Digite o PIB (em bilhões): ");
+    scanf("%f", &pib2);
+
+    printf("Digite a área (em km²): ");
+    scanf("%f", &area2);
+
+    printf("Digite o número de pontos turísticos: ");
+    scanf("%d", &pontosTuristicos2);
     
     
     // Exibição dos Dados das Cartas:
@@ -62,6 +91,7 @@ int main() {
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
 
     // Saida Carta1
+
     printf("\n=== Carta1 ===\n");
     printf("Estado: %s\n", estado1);
     printf("Código: %s\n", codigo1);
@@ -70,6 +100,17 @@ int main() {
     printf("PIB: R$ %.2f bilhões\n", pib1);
     printf("Área: %.2f km²\n", area1);
     printf("Pontos turísticos: %d\n", pontosTuristicos1);
+
+    // Saida Carta2
+
+    printf("\n=== Carta2 ===\n");
+    printf("Estado: %s\n", estado2);
+    printf("Código: %s\n", codigo2);
+    printf("Cidade: %s\n", nomeCidade2);
+    printf("População: %d\n", populacao2);
+    printf("PIB: R$ %.2f bilhões\n", pib2);
+    printf("Área: %.2f km²\n", area2);
+    printf("Pontos turísticos: %d\n", pontosTuristicos2);
 
 
     return 0;
