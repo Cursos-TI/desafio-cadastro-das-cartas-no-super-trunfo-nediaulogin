@@ -10,7 +10,8 @@
 int main() {
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-
+    
+    
     // Carta 1
     char codigo1[4]; 
     char nomeCidade1[20];
@@ -20,6 +21,12 @@ int main() {
     int pontosTuristicos1;
     char estado1[20];
 
+    // Novos Atributos1:
+
+    float densidadePop1;
+    float pibPer1;
+
+
     // Carta 2
     char codigo2[4];
     char nomeCidade2[20];
@@ -28,6 +35,11 @@ int main() {
     float pib2;
     int pontosTuristicos2;
     char estado2[20];
+
+    // Novos Atributos2:
+
+    float densidadePop2;
+    float pibPer2;
     
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
@@ -84,6 +96,18 @@ int main() {
 
     printf("Digite o número de pontos turísticos: ");
     scanf("%d", &pontosTuristicos2);
+
+    //Calculo dos novos atributos  
+    //Carta1
+
+    densidadePop1 = populacao1/area1;
+    //preferi deixar o pib em bilhões e ajustar aqui
+    pibPer1 = (pib1 * 1000000000) / populacao1;
+    
+    //Calculo dos novos atributos  
+    //Carta2
+    densidadePop2 = populacao2/area2;
+    pibPer2 = (pib2 * 1000000000) / populacao2;
     
     
     // Exibição dos Dados das Cartas:
@@ -100,6 +124,8 @@ int main() {
     printf("PIB: R$ %.2f bilhões\n", pib1);
     printf("Área: %.2f km²\n", area1);
     printf("Pontos turísticos: %d\n", pontosTuristicos1);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidadePop1);
+    printf("PIB per Capita: %.2f\n", pibPer1);
 
     // Saida Carta2
 
@@ -111,6 +137,8 @@ int main() {
     printf("PIB: R$ %.2f bilhões\n", pib2);
     printf("Área: %.2f km²\n", area2);
     printf("Pontos turísticos: %d\n", pontosTuristicos2);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidadePop2);
+    printf("PIB per Capita: %.2f\n", pibPer2);
 
 
     return 0;
