@@ -25,6 +25,10 @@ int main() {
 
     long double densidadePop1;
     long double pibPer1;
+    
+    //escolhi inteiros pois o valor pode ser muito grande então não darei tanta importancia a precisão
+
+    unsigned long int poder1;
 
 
     // Carta 2
@@ -40,6 +44,7 @@ int main() {
 
     long double densidadePop2;
     long double pibPer2;
+    unsigned long int poder2;
     
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
@@ -107,6 +112,8 @@ int main() {
     //preferi deixar o pib em bilhões e ajustar aqui
     pibPer1 = (pib1 * 1000000000) / populacao1;
     
+    poder1 = populacao1 + area1 + (pib1 * 1000000000) + pontosTuristicos1 - densidadePop1 + pibPer1;    
+    
     //Calculo dos novos atributos  
     //Carta2
     if (area2 == 0)
@@ -115,6 +122,8 @@ int main() {
     }
     densidadePop2 = populacao2/area2;
     pibPer2 = (pib2 * 1000000000) / populacao2;
+
+    poder2 = populacao2 + area2 + (pib2 * 1000000000) + pontosTuristicos2 - densidadePop2 + pibPer2;
     
     
     // Exibição dos Dados das Cartas:
